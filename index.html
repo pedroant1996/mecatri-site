@@ -63,12 +63,6 @@
      "closes": "17:00"
     }
    ],
-   "founder": {
-    "@type": "Person",
-    "name": "Pedro Antônio dos Reis Oliveira",
-    "jobTitle": "Engenheiro mecânico",
-    "identifier": "CREA-MG 290382"
-   },
    "sameAs": [
     "https://www.linkedin.com/company/mecatri-engenharia",
     "https://www.instagram.com/mecatriengenharia"
@@ -196,7 +190,12 @@ section{padding-block:80px}
 
 /* portfólio */
 .port{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:2px solid var(--line)}
-.port div{background:var(--bg);padding:24px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.port>div{background:var(--bg);display:flex;flex-direction:column;min-width:0}
+.port img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:#fff}
+.port .t{padding:20px 24px 24px;display:flex;flex-direction:column;gap:8px}
+.clients{margin-top:36px}
+.clients ul{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.clients li{border:1px solid var(--line);background:var(--surface);padding:8px 14px;font-family:var(--f-display);font-weight:700;font-size:15px;letter-spacing:.02em}
 .port p{color:var(--muted);font-size:16px}
 @media (max-width:860px){.port{grid-template-columns:1fr 1fr}}
 @media (max-width:540px){.port{grid-template-columns:1fr}}
@@ -306,17 +305,18 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
           <a class="btn btn-o" href="#servicos">Ver serviços</a>
         </div>
       </div>
-      <div class="plate" aria-label="Dados do responsável técnico">
+      <div class="plate" aria-label="Dados da empresa">
         <div class="plate-h">
           <svg style="background:#F6F5F1;border-radius:50%;padding:3px"><use href="#logo"/></svg>
           <div><b>MECATRI ENGENHARIA</b><div style="color:#9C988C;font-size:11px;letter-spacing:.08em">PLACA DE IDENTIFICAÇÃO</div></div>
         </div>
         <dl>
-          <dt>Resp. técnico</dt><dd>Eng. Pedro Oliveira</dd>
-          <dt>Formação</dt><dd>Engenheiro mecânico, pós-graduado</dd>
-          <dt>Registro</dt><dd>CREA-MG 290382</dd>
-          <dt>Documento</dt><dd>Laudos emitidos com ART</dd>
-          <dt>Atendimento</dt><dd>Uberaba e Triângulo Mineiro</dd>
+          <dt>Empresa</dt><dd>Mecatri Engenharia</dd>
+          <dt>Atividade</dt><dd>Laudos, projetos e responsabilidade técnica</dd>
+          <dt>Normas</dt><dd>NR-11 · NR-12 · NR-13 · NR-35</dd>
+          <dt>Documento</dt><dd>Emitido com ART no CREA-MG</dd>
+          <dt>Sede</dt><dd>Uberaba/MG</dd>
+          <dt>Atendimento</dt><dd>Triângulo Mineiro e região</dd>
         </dl>
       </div>
     </div>
@@ -324,7 +324,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   </div>
 
   <div class="normas">
-    <div class="wrap"><small>Atuação em</small><span>NR-12 Máquinas</span><span>NR-13 Vasos de pressão</span><span>NR-11 Movimentação de cargas</span><span>Laudos veiculares</span></div>
+    <div class="wrap"><small>Atuação em</small><span>NR-12 Máquinas</span><span>NR-13 Vasos de pressão</span><span>Responsabilidade técnica</span><span>Laudos veiculares e fumaça preta</span><span>Projetos mecânicos</span><span>NR-35 Linhas de vida</span><span>Segurança do trabalho</span><span>Venda e aluguel de máquinas</span></div>
   </div>
 
   <section id="servicos">
@@ -338,8 +338,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
         <article><span class="code">NR-13</span><h3><a href="/laudo-nr-13">Vasos de pressão e compressores</a></h3><p>Inspeção, reconstituição de prontuário, categorização e documentação de vasos e reservatórios.</p><a class="more-link" href="/laudo-nr-13">Saiba mais →</a></article>
         <article><span class="code">RT</span><h3><a href="/responsabilidade-tecnica">Responsabilidade técnica</a></h3><p>Engenheiro responsável pela sua empresa junto ao CREA, com visitas e acompanhamento contínuo.</p><a class="more-link" href="/responsabilidade-tecnica">Saiba mais →</a></article>
         <article><span class="code">VEÍCULOS</span><h3><a href="/laudo-caminhoes-fumaca-preta">Laudos de caminhões e fumaça preta</a></h3><p>Laudos para caminhões, implementos e equipamentos veiculares, e laudo de fumaça preta para frotas.</p><a class="more-link" href="/laudo-caminhoes-fumaca-preta">Saiba mais →</a></article>
-        <article><span class="code">PROJETOS</span><h3><a href="/projetos-mecanicos">Projetos mecânicos</a></h3><p>Projeto e detalhamento de estruturas, pontes rolantes, plataformas, escadas e dispositivos.</p><a class="more-link" href="/projetos-mecanicos">Saiba mais →</a></article>
-        <article><span class="code">CONSULTORIA</span><h3>Segurança do trabalho e melhoria contínua</h3><p>Consultoria de engenharia, acompanhamento de obras e manutenção, e ferramentas lean no chão de fábrica.</p></article>
+        <article><span class="code">PROJETOS</span><h3><a href="/projetos-mecanicos">Projetos mecânicos</a></h3><p>Adequação à NR-12, estruturas metálicas, plataformas e escadas, dispositivos de máquinas e linhas de vida NR-35.</p><a class="more-link" href="/projetos-mecanicos">Saiba mais →</a></article>
+        <article><span class="code">CONSULTORIA</span><h3>Consultoria em segurança do trabalho</h3><p>Consultoria de engenharia, adequação às normas regulamentadoras e acompanhamento de obras e manutenção.</p></article>
       </div>
       <p class="note">Também fazemos venda e aluguel de máquinas. Fale com a gente para saber o que está disponível.</p>
     </div>
@@ -385,15 +385,21 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
     <div class="wrap">
       <div class="sec-head">
         <div><p class="tag">Trabalhos realizados</p><h2 style="margin-top:10px">Experiência em campo</h2></div>
-        <p>Alguns serviços que o engenheiro responsável já entregou. Os nomes dos clientes ficam em sigilo.</p>
+        <p>Alguns serviços já entregues para indústrias, construtoras, oficinas e frotas da região.</p>
       </div>
       <div class="port">
-        <div><span class="tag">NR-13</span><h3>Inspeção de vaso de pressão</h3><p>Inspeção de reservatório e documentação conforme a norma.</p></div>
-        <div><span class="tag">NR-13</span><h3>Prontuário de compressor</h3><p>Reconstituição completa do prontuário de um vaso sem documentação.</p></div>
-        <div><span class="tag">Projeto</span><h3>Ponte rolante</h3><p>Projeto e desenhos de fabricação de ponte rolante.</p></div>
-        <div><span class="tag">NR-11 · Veículos</span><h3>Guindauto em caminhão</h3><p>Laudo de equipamento de movimentação de carga montado em caminhão.</p></div>
-        <div><span class="tag">Laudo</span><h3>Linha de gás</h3><p>Laudo técnico de rede de distribuição de gás.</p></div>
-        <div><span class="tag">NR-12</span><h3>Clínica de Pilates</h3><p>Apreciação de riscos dos aparelhos, matriz de risco e plano de manutenção.</p></div>
+        <div><img src="/img/vaso-inox.webp" alt="Vaso de pressão misturador em aço inox" width="1200" height="900" loading="lazy"><div class="t"><span class="tag">NR-13</span><h3>Inspeção de vaso de pressão</h3><p>Inspeção de vaso misturador, placa de identificação e documentação conforme a norma.</p></div></div>
+        <div><img src="/img/compressor.webp" alt="Compressor de ar industrial em casa de máquinas" width="1200" height="900" loading="lazy"><div class="t"><span class="tag">NR-13</span><h3>Prontuário de compressor</h3><p>Reconstituição completa do prontuário de um reservatório sem documentação.</p></div></div>
+        <div><img src="/img/desenho-vaso.webp" alt="Desenho técnico de vaso de pressão" width="1200" height="900" loading="lazy"><div class="t"><span class="tag">NR-13 · Projeto</span><h3>Desenho de vaso de pressão</h3><p>Levantamento e desenhos técnicos para compor o prontuário do equipamento.</p></div></div>
+        <div><img src="/img/desenho-ponte-rolante.webp" alt="Desenho técnico de pórtico de ponte rolante" width="1200" height="900" loading="lazy"><div class="t"><span class="tag">Projeto</span><h3>Ponte rolante</h3><p>Projeto, memorial de cálculo e desenhos de fabricação de ponte rolante.</p></div></div>
+        <div><img src="/img/guindauto.webp" alt="Caminhão com guindauto articulado" width="1200" height="900" loading="lazy"><div class="t"><span class="tag">NR-11 · Veículos</span><h3>Guindauto em caminhão</h3><p>Laudo de equipamento de movimentação de carga montado em caminhão.</p></div></div>
+        <div><img src="/img/linha-gas.webp" alt="Rede de distribuição de gás em área industrial" width="1200" height="900" loading="lazy"><div class="t"><span class="tag">Laudo</span><h3>Linha de gás</h3><p>Laudo técnico de rede de distribuição de gás.</p></div></div>
+      </div>
+      <div class="clients">
+        <p class="tag">Empresas atendidas</p>
+        <ul>
+          <li>Syngenta</li><li>Prefeitura de Uberaba</li><li>Metallmec Engenharia</li><li>CR Manutenção</li><li>Galvão Soluções em Engenharia</li><li>Barsa Engenharia</li><li>Construtora Traço</li><li>Televale</li><li>C e TST</li><li>Castelo Real</li><li>Vitacharm</li><li>Sipcham</li><li>GPC</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -405,13 +411,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
         <h2 style="margin-top:10px">Engenharia do Triângulo Mineiro</h2>
         <div class="facts" style="margin-top:28px">
           <div><span>Sede</span><span>Uberaba/MG</span></div>
-          <div><span>Responsável</span><span>Eng. Pedro Oliveira</span></div>
-          <div><span>Registro</span><span>CREA-MG 290382</span></div>
+          <div><span>Atendimento</span><span>Triângulo Mineiro e região</span></div>
+          <div><span>Documentação</span><span>Com ART no CREA-MG</span></div>
         </div>
       </div>
       <div class="txt">
         <p>O nome Mecatri junta <strong>mecânica</strong> e <strong>Triângulo</strong>: uma empresa de engenharia daqui, que conhece a indústria, o agro e o transporte da região.</p>
-        <p>À frente da empresa está o engenheiro mecânico Pedro Oliveira, pós-graduado, com anos de experiência em laudos, inspeções e projetos para indústrias, usinas, oficinas e frotas.</p>
+        <p>A Mecatri reúne anos de experiência em laudos, inspeções e projetos para indústrias, usinas, construtoras, oficinas e frotas da região.</p>
         <p>O objetivo é simples: deixar a sua operação segura, dentro das normas e funcionando bem, com um atendimento direto e sem enrolação.</p>
       </div>
     </div>
@@ -420,14 +426,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   <section id="contato" class="contact">
     <div class="wrap">
       <p class="tag">Contato</p>
-      <h2 style="margin-top:10px">Fale com o engenheiro</h2>
+      <h2 style="margin-top:10px">Fale conosco</h2>
       <div class="c-grid">
         <div class="channels">
           <div class="ch"><span class="tag">WhatsApp</span><a href="https://wa.me/5534920017269" target="_blank" rel="noopener">(34) 9 2001-7269</a><button class="copy" type="button" data-copy="(34) 92001-7269">copiar</button></div>
           <div class="ch"><span class="tag">E-mail</span><span class="v">mecatriengenharia@gmail.com</span><button class="copy" type="button" data-copy="mecatriengenharia@gmail.com">copiar</button></div>
           <div class="ch"><span class="tag">Instagram</span><a href="https://www.instagram.com/mecatriengenharia/" target="_blank" rel="noopener">@mecatriengenharia</a><span></span></div>
           <div class="ch"><span class="tag">LinkedIn</span><a href="https://www.linkedin.com/company/mecatri-engenharia/" target="_blank" rel="noopener">Mecatri Engenharia</a><span></span></div>
-          <div class="ch"><span class="tag">Engenheiro</span><a href="https://www.instagram.com/engpedro.oliveira/" target="_blank" rel="noopener">@engpedro.oliveira</a><span></span></div>
           <div class="ch"><span class="tag">Local</span><span class="v">Uberaba/MG · atendimento na região</span><span></span></div>
         </div>
         <form id="f" novalidate>
@@ -456,7 +461,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 
 <footer>
   <div class="hazard"></div>
-  <div class="wrap"><span>© 2026 Mecatri Engenharia · Uberaba/MG</span><span>Resp. técnico: Eng. Pedro Oliveira · CREA-MG 290382</span></div>
+  <div class="wrap"><span>© 2026 Mecatri Engenharia · Uberaba/MG</span><span>Laudos e projetos com ART</span></div>
 </footer>
 
 <script>
