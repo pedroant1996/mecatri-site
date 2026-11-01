@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mecatri Engenharia</title>
+<meta name="description" content="Mecatri Engenharia — laudos técnicos, NR-12, NR-13, responsabilidade técnica e projetos mecânicos em Uberaba e no Triângulo Mineiro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:wght@500;700;800&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: placa de identificação industrial — faixa de sinalização amarelo/preto, blocos técnicos com etiqueta mono */
+:root{
+  --bg:#F6F5F1; --surface:#FFFFFF; --ink:#141414; --muted:#55524A; --line:#DEDAD0;
+  --yellow:#F2B705; --on-yellow:#141414; --band:#141414; --on-band:#F6F5F1;
+  --f-display:"Saira","Arial Narrow",system-ui,sans-serif;
+  --f-body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --wrap:1120px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121211; --surface:#1B1B19; --ink:#F1EFE8; --muted:#A9A498; --line:#2E2D29;
+  --band:#0A0A0A; --on-band:#F1EFE8; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121211; --surface:#1B1B19; --ink:#F1EFE8; --muted:#A9A498; --line:#2E2D29;
+  --band:#0A0A0A; --on-band:#F1EFE8; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--band)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);line-height:1.1;text-wrap:balance;margin:0}
+h2{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.01em}
+h3{font-size:20px;font-weight:700}
+p{margin:0}
+.tag{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.hazard{height:10px;background:repeating-linear-gradient(-45deg,var(--yellow) 0 14px,#141414 14px 28px)}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--band);color:var(--on-band)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand b{font-family:var(--f-display);font-weight:800;font-size:20px;letter-spacing:.02em}
+.brand span{font-family:var(--f-display);font-weight:500;font-size:10px;letter-spacing:.32em;display:block;opacity:.8}
+.brand svg{width:34px;height:34px;flex:none}
+.links{display:flex;gap:22px;font-size:15px}
+.links a{text-decoration:none;opacity:.85}
+.links a:hover{opacity:1;color:var(--yellow)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:700;font-size:15px;letter-spacing:.02em;text-decoration:none;padding:12px 20px;border:2px solid transparent;cursor:pointer}
+.btn-y{background:var(--yellow);color:var(--on-yellow)}
+.btn-y:hover{filter:brightness(1.06)}
+.btn-o{border-color:currentColor;background:transparent}
+.nav .btn{padding:8px 14px;font-size:14px}
+@media (max-width:820px){.links{display:none}}
+
+/* hero */
+.hero{background:var(--band);color:var(--on-band)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:48px;align-items:center;padding-block:64px 72px}
+.hero .tag{color:var(--yellow)}
+.hero h1{font-size:clamp(36px,5.6vw,64px);font-weight:800;margin-top:14px;letter-spacing:-.015em}
+.hero h1 em{font-style:normal;color:var(--yellow)}
+.hero p.lead{margin-top:20px;font-size:19px;max-width:34em;opacity:.88}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.plate{background:#1E1E1C;border:1px solid #3A3934;padding:22px;font-family:var(--f-mono);font-size:13px;color:#E9E6DC;position:relative}
+.plate::before,.plate::after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:#55534C;top:10px}
+.plate::before{left:10px}.plate::after{right:10px}
+.plate-h{display:flex;align-items:center;gap:12px;border-bottom:1px solid #3A3934;padding-bottom:14px;margin-bottom:12px}
+.plate-h svg{width:46px;height:46px}
+.plate-h b{font-family:var(--f-display);font-size:18px;letter-spacing:.04em;color:#F6F5F1}
+.plate dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;margin:0}
+.plate dt{color:#9C988C;text-transform:uppercase;letter-spacing:.06em;font-size:11px;padding-top:2px}
+.plate dd{margin:0;min-width:0}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr;padding-block:44px 52px;gap:32px}}
+
+/* normas strip */
+.normas{background:var(--yellow);color:var(--on-yellow)}
+.normas .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;padding-block:16px;font-family:var(--f-display);font-weight:700;font-size:15px;letter-spacing:.04em}
+.normas small{font-family:var(--f-mono);font-weight:500;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+
+section{padding-block:80px}
+.sec-head{display:grid;grid-template-columns:1fr 1.1fr;gap:24px 48px;align-items:end;margin-bottom:40px}
+.sec-head p{color:var(--muted);max-width:36em}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr}section{padding-block:60px}}
+
+/* serviços */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink)}
+.svc article{padding:26px 24px 28px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:10px;min-width:0}
+.svc article:not(:nth-child(3n+1)){padding-left:24px;border-left:1px solid var(--line)}
+.svc .code{font-family:var(--f-mono);font-size:12px;color:var(--muted);letter-spacing:.06em}
+.svc p{color:var(--muted);font-size:16px}
+@media (max-width:900px){.svc{grid-template-columns:1fr 1fr}.svc article{padding-left:0!important;border-left:0!important;padding-right:20px}}
+@media (max-width:560px){.svc{grid-template-columns:1fr}}
+
+/* RT destaque */
+.rt{background:var(--surface);border-block:1px solid var(--line)}
+.rt-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.rt ul{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:14px}
+.rt li{display:grid;grid-template-columns:22px 1fr;gap:12px}
+.rt li::before{content:"";width:12px;height:12px;margin-top:7px;background:var(--yellow);clip-path:polygon(50% 0,100% 100%,0 100%)}
+.rt-box{border:2px solid var(--ink);padding:28px}
+.rt-box h3{font-size:24px}
+.rt-box p{margin-top:12px;color:var(--muted)}
+.rt-box .btn{margin-top:22px}
+@media (max-width:820px){.rt-grid{grid-template-columns:1fr;gap:32px}}
+
+/* processo */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s}
+.steps li{list-style:none;counter-increment:s;border-top:4px solid var(--yellow);padding-top:16px;display:flex;flex-direction:column;gap:8px}
+.steps li::before{content:"ETAPA " counter(s);font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;color:var(--muted)}
+.steps p{color:var(--muted);font-size:16px}
+.steps ol{margin:0;padding:0}
+@media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}}
+
+/* portfólio */
+.port{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:2px solid var(--line)}
+.port div{background:var(--bg);padding:24px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.port p{color:var(--muted);font-size:16px}
+@media (max-width:860px){.port{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.port{grid-template-columns:1fr}}
+.note{margin-top:16px;font-size:14px;color:var(--muted)}
+
+/* sobre */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}
+.about .facts{display:grid;gap:0;border-top:2px solid var(--ink)}
+.about .facts div{display:flex;justify-content:space-between;gap:16px;padding-block:12px;border-bottom:1px solid var(--line)}
+.about .facts span:last-child{font-weight:600;text-align:right}
+.about p+p{margin-top:14px}
+.about .txt{max-width:38em}
+@media (max-width:820px){.about{grid-template-columns:1fr;gap:28px}}
+
+/* contato */
+.contact{background:var(--band);color:var(--on-band)}
+.contact .tag{color:var(--yellow)}
+.c-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:32px}
+.channels{display:grid;gap:0;border-top:1px solid #3A3934}
+.ch{display:grid;grid-template-columns:110px 1fr auto;gap:12px;align-items:center;padding-block:14px;border-bottom:1px solid #3A3934}
+.ch .tag{color:#9C988C}
+.ch a,.ch span.v{font-weight:600;word-break:break-word;min-width:0}
+.copy{font-family:var(--f-mono);font-size:12px;background:transparent;color:inherit;border:1px solid #55534C;padding:4px 8px;cursor:pointer}
+.copy:hover{border-color:var(--yellow);color:var(--yellow)}
+form{display:grid;gap:14px}
+label{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#B5B1A5;display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:16px;color:#F1EFE8;background:#1E1E1C;border:1px solid #3A3934;padding:11px 12px;width:100%;text-transform:none;letter-spacing:0}
+input:focus,select:focus,textarea:focus{border-color:var(--yellow);outline:none}
+textarea{min-height:96px;resize:vertical}
+.hint{font-size:13px;color:#9C988C}
+@media (max-width:820px){.c-grid{grid-template-columns:1fr}}
+@media (max-width:420px){.ch{grid-template-columns:1fr auto}.ch .tag{grid-column:1/-1}}
+
+footer{background:var(--band);color:#9C988C;font-size:14px;border-top:1px solid #2A2A27}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:24px}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="logo" viewBox="0 0 100 100">
+      <g fill="#141414">
+        <circle cx="50" cy="50" r="36"/>
+        <g id="t"><rect x="42" y="4" width="16" height="16" rx="2"/></g>
+        <use href="#t" transform="rotate(45 50 50)"/><use href="#t" transform="rotate(90 50 50)"/>
+        <use href="#t" transform="rotate(135 50 50)"/><use href="#t" transform="rotate(180 50 50)"/>
+        <use href="#t" transform="rotate(225 50 50)"/><use href="#t" transform="rotate(270 50 50)"/>
+        <use href="#t" transform="rotate(315 50 50)"/>
+      </g>
+      <polygon points="50,27 72,66 28,66" fill="none" stroke="#F2B705" stroke-width="7" stroke-linejoin="miter"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#topo" aria-label="Mecatri Engenharia, início">
+      <svg style="background:#F6F5F1;border-radius:50%;padding:2px"><use href="#logo"/></svg>
+      <div><b>MECATRI</b><span>ENGENHARIA</span></div>
+    </a>
+    <nav class="links" aria-label="Seções">
+      <a href="#servicos">Serviços</a><a href="#rt">Responsabilidade técnica</a><a href="#trabalhos">Trabalhos</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn-y" href="https://wa.me/5534920017269?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Mecatri%20Engenharia." target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<main id="topo">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="tag">Engenharia mecânica · Uberaba / Triângulo Mineiro</p>
+        <h1>Segurança, conformidade e eficiência para a <em>sua operação</em>.</h1>
+        <p class="lead">Laudos técnicos, adequação às normas regulamentadoras, responsabilidade técnica e projetos mecânicos para indústrias, oficinas, frotas e empresas da região.</p>
+        <div class="cta">
+          <a class="btn btn-y" href="https://wa.me/5534920017269?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">Pedir orçamento</a>
+          <a class="btn btn-o" href="#servicos">Ver serviços</a>
+        </div>
+      </div>
+      <div class="plate" aria-label="Dados do responsável técnico">
+        <div class="plate-h">
+          <svg style="background:#F6F5F1;border-radius:50%;padding:3px"><use href="#logo"/></svg>
+          <div><b>MECATRI ENGENHARIA</b><div style="color:#9C988C;font-size:11px;letter-spacing:.08em">PLACA DE IDENTIFICAÇÃO</div></div>
+        </div>
+        <dl>
+          <dt>Resp. técnico</dt><dd>Eng. Pedro Oliveira</dd>
+          <dt>Formação</dt><dd>Engenheiro mecânico, pós-graduado</dd>
+          <dt>Registro</dt><dd>CREA-MG 290382</dd>
+          <dt>Documento</dt><dd>Laudos emitidos com ART</dd>
+          <dt>Atendimento</dt><dd>Uberaba e Triângulo Mineiro</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="hazard"></div>
+  </div>
+
+  <div class="normas">
+    <div class="wrap"><small>Atuação em</small><span>NR-12 Máquinas</span><span>NR-13 Vasos de pressão</span><span>NR-11 Movimentação de cargas</span><span>Laudos veiculares</span></div>
+  </div>
+
+  <section id="servicos">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="tag">Serviços</p><h2 style="margin-top:10px">O que a Mecatri faz pela sua empresa</h2></div>
+        <p>Cada serviço termina num documento técnico assinado e com ART, pronto para fiscalização, auditoria ou seguradora.</p>
+      </div>
+      <div class="svc">
+        <article><span class="code">NR-12</span><h3>Laudos de máquinas e equipamentos</h3><p>Apreciação de riscos, inventário de máquinas, plano de adequação e laudo de conformidade.</p></article>
+        <article><span class="code">NR-13</span><h3>Vasos de pressão e compressores</h3><p>Inspeção, reconstituição de prontuário, categorização e documentação de vasos e reservatórios.</p></article>
+        <article><span class="code">RT</span><h3>Responsabilidade técnica</h3><p>Engenheiro responsável pela sua empresa junto ao CREA, com visitas e acompanhamento contínuo.</p></article>
+        <article><span class="code">VEÍCULOS</span><h3>Laudos de caminhões e fumaça preta</h3><p>Laudos para caminhões, implementos e equipamentos veiculares, e laudo de fumaça preta para frotas.</p></article>
+        <article><span class="code">PROJETOS</span><h3>Projetos mecânicos</h3><p>Projeto e detalhamento de estruturas, pontes rolantes, plataformas, escadas e dispositivos.</p></article>
+        <article><span class="code">CONSULTORIA</span><h3>Segurança do trabalho e melhoria contínua</h3><p>Consultoria de engenharia, acompanhamento de obras e manutenção, e ferramentas lean no chão de fábrica.</p></article>
+      </div>
+      <p class="note">Também fazemos venda e aluguel de máquinas. Fale com a gente para saber o que está disponível.</p>
+    </div>
+  </section>
+
+  <section id="rt" class="rt">
+    <div class="wrap rt-grid">
+      <div>
+        <p class="tag">Responsabilidade técnica</p>
+        <h2 style="margin-top:10px">Um engenheiro responsável pela sua empresa, todo mês</h2>
+        <ul>
+          <li><span>Registro do responsável técnico junto ao CREA-MG.</span></li>
+          <li><span>Visitas periódicas e orientação sobre máquinas, equipamentos e normas.</span></li>
+          <li><span>Documentação técnica em dia para fiscalizações e auditorias.</span></li>
+          <li><span>Contato direto com o engenheiro quando surgir uma dúvida ou um problema.</span></li>
+        </ul>
+      </div>
+      <div class="rt-box">
+        <p class="tag">Contrato mensal</p>
+        <h3 style="margin-top:8px">Valor conforme o porte e a atividade da empresa</h3>
+        <p>Conte um pouco sobre a sua operação e a gente monta uma proposta. Sem compromisso.</p>
+        <a class="btn btn-y" href="https://wa.me/5534920017269?text=Ol%C3%A1!%20Quero%20uma%20proposta%20de%20responsabilidade%20t%C3%A9cnica%20(RT)." target="_blank" rel="noopener">Quero uma proposta de RT</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="como">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="tag">Como funciona</p><h2 style="margin-top:10px">Do primeiro contato ao laudo na mão</h2></div>
+        <p>Um processo simples, com prazo combinado antes de começar.</p>
+      </div>
+      <ol class="steps">
+        <li><h3>Conversa e orçamento</h3><p>Você explica a necessidade pelo WhatsApp ou e-mail e recebe uma proposta.</p></li>
+        <li><h3>Visita técnica</h3><p>Levantamento em campo: fotos, medições, documentos e entrevista com a equipe.</p></li>
+        <li><h3>Laudo com ART</h3><p>Relatório técnico com a análise, as não conformidades e as recomendações.</p></li>
+        <li><h3>Acompanhamento</h3><p>Apoio na adequação e revisão quando as correções forem feitas.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="trabalhos" class="rt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="tag">Trabalhos realizados</p><h2 style="margin-top:10px">Experiência em campo</h2></div>
+        <p>Alguns serviços que o engenheiro responsável já entregou. Os nomes dos clientes ficam em sigilo.</p>
+      </div>
+      <div class="port">
+        <div><span class="tag">NR-13</span><h3>Inspeção de vaso de pressão</h3><p>Inspeção de reservatório e documentação conforme a norma.</p></div>
+        <div><span class="tag">NR-13</span><h3>Prontuário de compressor</h3><p>Reconstituição completa do prontuário de um vaso sem documentação.</p></div>
+        <div><span class="tag">Projeto</span><h3>Ponte rolante</h3><p>Projeto e desenhos de fabricação de ponte rolante.</p></div>
+        <div><span class="tag">NR-11 · Veículos</span><h3>Guindauto em caminhão</h3><p>Laudo de equipamento de movimentação de carga montado em caminhão.</p></div>
+        <div><span class="tag">Laudo</span><h3>Linha de gás</h3><p>Laudo técnico de rede de distribuição de gás.</p></div>
+        <div><span class="tag">NR-12</span><h3>Clínica de Pilates</h3><p>Apreciação de riscos dos aparelhos, matriz de risco e plano de manutenção.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="wrap about">
+      <div>
+        <p class="tag">Sobre</p>
+        <h2 style="margin-top:10px">Engenharia do Triângulo Mineiro</h2>
+        <div class="facts" style="margin-top:28px">
+          <div><span>Sede</span><span>Uberaba/MG</span></div>
+          <div><span>Responsável</span><span>Eng. Pedro Oliveira</span></div>
+          <div><span>Registro</span><span>CREA-MG 290382</span></div>
+        </div>
+      </div>
+      <div class="txt">
+        <p>O nome Mecatri junta <strong>mecânica</strong> e <strong>Triângulo</strong>: uma empresa de engenharia daqui, que conhece a indústria, o agro e o transporte da região.</p>
+        <p>À frente da empresa está o engenheiro mecânico Pedro Oliveira, pós-graduado, com anos de experiência em laudos, inspeções e projetos para indústrias, usinas, oficinas e frotas.</p>
+        <p>O objetivo é simples: deixar a sua operação segura, dentro das normas e funcionando bem, com um atendimento direto e sem enrolação.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contact">
+    <div class="wrap">
+      <p class="tag">Contato</p>
+      <h2 style="margin-top:10px">Fale com o engenheiro</h2>
+      <div class="c-grid">
+        <div class="channels">
+          <div class="ch"><span class="tag">WhatsApp</span><a href="https://wa.me/5534920017269" target="_blank" rel="noopener">(34) 9 2001-7269</a><button class="copy" type="button" data-copy="(34) 92001-7269">copiar</button></div>
+          <div class="ch"><span class="tag">E-mail</span><span class="v">mecatriengenharia@gmail.com</span><button class="copy" type="button" data-copy="mecatriengenharia@gmail.com">copiar</button></div>
+          <div class="ch"><span class="tag">Instagram</span><a href="https://www.instagram.com/mecatriengenharia/" target="_blank" rel="noopener">@mecatriengenharia</a><span></span></div>
+          <div class="ch"><span class="tag">LinkedIn</span><a href="https://www.linkedin.com/company/mecatri-engenharia/" target="_blank" rel="noopener">Mecatri Engenharia</a><span></span></div>
+          <div class="ch"><span class="tag">Engenheiro</span><a href="https://www.instagram.com/engpedro.oliveira/" target="_blank" rel="noopener">@engpedro.oliveira</a><span></span></div>
+          <div class="ch"><span class="tag">Local</span><span class="v">Uberaba/MG · atendimento na região</span><span></span></div>
+        </div>
+        <form id="f" novalidate>
+          <label for="nome">Seu nome<input id="nome" name="nome" autocomplete="name" placeholder="Ex.: Carlos Souza"></label>
+          <label for="empresa">Empresa<input id="empresa" name="empresa" autocomplete="organization" placeholder="Ex.: Metalúrgica Exemplo"></label>
+          <label for="servico">Serviço
+            <select id="servico" name="servico">
+              <option>Laudo NR-12 (máquinas)</option>
+              <option>NR-13 (vasos de pressão / compressores)</option>
+              <option>Responsabilidade técnica (RT)</option>
+              <option>Laudo de caminhão / fumaça preta</option>
+              <option>Projeto mecânico</option>
+              <option>Consultoria / segurança do trabalho</option>
+              <option>Venda ou aluguel de máquinas</option>
+              <option>Outro</option>
+            </select>
+          </label>
+          <label for="msg">Mensagem<textarea id="msg" name="msg" placeholder="Conte o que você precisa, a cidade e o prazo."></textarea></label>
+          <a id="send" class="btn btn-y" href="https://wa.me/5534920017269" target="_blank" rel="noopener" style="justify-content:center">Enviar pelo WhatsApp</a>
+          <p class="hint">Abre o WhatsApp com a mensagem pronta. É só conferir e enviar.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="hazard"></div>
+  <div class="wrap"><span>© 2026 Mecatri Engenharia · Uberaba/MG</span><span>Resp. técnico: Eng. Pedro Oliveira · CREA-MG 290382</span></div>
+</footer>
+
+<script>
+(function(){
+  var f=document.getElementById('f'), send=document.getElementById('send');
+  function upd(){
+    var v=function(id){return (document.getElementById(id).value||'').trim()};
+    var t='Olá! Vim pelo site da Mecatri Engenharia.';
+    if(v('nome')) t+='\nNome: '+v('nome');
+    if(v('empresa')) t+='\nEmpresa: '+v('empresa');
+    t+='\nServiço: '+v('servico');
+    if(v('msg')) t+='\n'+v('msg');
+    send.href='https://wa.me/5534920017269?text='+encodeURIComponent(t);
+  }
+  f.addEventListener('input',upd); f.addEventListener('change',upd);
+  f.addEventListener('submit',function(e){e.preventDefault()});
+  upd();
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var txt=b.getAttribute('data-copy'), done=function(){b.textContent='copiado';setTimeout(function(){b.textContent='copiar'},1600)};
+      try{navigator.clipboard.writeText(txt).then(done,function(){sel(b)})}catch(e){sel(b)}
+    });
+  });
+  function sel(b){var el=b.previousElementSibling;var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r)}
+})();
+</script>
+</body>
+</html>
