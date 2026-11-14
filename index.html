@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Mecatri Engenharia | Laudos NR-12, NR-13 e RT em Uberaba</title>
+<title>Mecatri Engenharia | Adequação NR-12, linha de vida, NR-13 e RT</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2278%22%20fill%3D%22none%22%20stroke%3D%22%23141414%22%20stroke-width%3D%2218%22%20stroke-dasharray%3D%2220.4%2020.4%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2272%22%20fill%3D%22%23141414%22/%3E%3Cpolygon%20points%3D%22100%2C58%20138%2C124%2062%2C124%22%20fill%3D%22%23F2B705%22%20stroke%3D%22%23F2B705%22%20stroke-width%3D%226%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E">
 <link rel="canonical" href="https://www.mecatriengenharia.com.br/">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Mecatri Engenharia">
-<meta property="og:title" content="Mecatri Engenharia | Laudos NR-12, NR-13 e RT em Uberaba">
-<meta property="og:description" content="Engenharia mecânica e segurança do trabalho em Uberaba e no Triângulo Mineiro. Laudos com ART, responsabilidade técnica e projetos.">
+<meta property="og:title" content="Mecatri Engenharia | Adequação NR-12, linha de vida, NR-13 e RT">
+<meta property="og:description" content="Engenharia mecânica e segurança do trabalho em todo o Brasil. Adequação NR-12 do projeto à execução, linhas de vida, laudos com ART e responsabilidade técnica.">
 <meta property="og:url" content="https://www.mecatriengenharia.com.br/">
 <meta property="og:image" content="https://www.mecatriengenharia.com.br/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -30,7 +30,7 @@
    "legalName": "Mecatri Engenharia Ltda",
    "taxID": "70.039.251/0001-65",
    "foundingDate": "2026-11-06",
-   "description": "Engenharia mecânica e segurança do trabalho em Uberaba e no Triângulo Mineiro: laudos NR-12 e NR-13, responsabilidade técnica (RT), laudos de caminhões e fumaça preta, projetos mecânicos e consultoria.",
+   "description": "Engenharia mecânica e segurança do trabalho com sede em Uberaba/MG e atendimento em todo o Brasil: adequação NR-12 do projeto à execução, linhas de vida NR-35, NR-13, responsabilidade técnica (RT), laudos de caminhões e fumaça preta e projetos mecânicos.",
    "url": "https://www.mecatriengenharia.com.br/",
    "logo": "https://www.mecatriengenharia.com.br/logo.png",
    "image": "https://www.mecatriengenharia.com.br/og.jpg",
@@ -44,12 +44,8 @@
    },
    "areaServed": [
     {
-     "@type": "City",
-     "name": "Uberaba"
-    },
-    {
-     "@type": "AdministrativeArea",
-     "name": "Triângulo Mineiro"
+     "@type": "Country",
+     "name": "Brasil"
     }
    ],
    "openingHoursSpecification": [
@@ -82,7 +78,7 @@
  ]
 }
 </script>
-<meta name="description" content="Mecatri Engenharia — laudos técnicos, NR-12, NR-13, responsabilidade técnica e projetos mecânicos em Uberaba e no Triângulo Mineiro.">
+<meta name="description" content="Mecatri Engenharia — adequação NR-12 do projeto à execução, linhas de vida NR-35, NR-13, responsabilidade técnica e projetos mecânicos. Sede em Uberaba/MG, atendimento em todo o Brasil.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:wght@500;700;800&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
@@ -240,6 +236,39 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 </style>
 
 <style>
+/* linha de vida + clientes */
+.lv-fig{margin:28px 0 8px;background:#141414;border:1px solid #2E2D29;padding:18px 18px 10px;overflow-x:auto}
+.lv-fig svg{display:block;width:100%;min-width:560px;height:auto}
+.lv-fig figcaption{font-family:var(--f-mono);font-size:12px;color:#9C988C;letter-spacing:.04em;margin-top:8px}
+.refs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:18px}
+.ref{border:1px solid var(--line);border-top:4px solid var(--yellow);background:var(--surface);padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.ref h3{font-size:18px}
+.ref dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:0;font-size:15px}
+.ref dt{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.ref dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.steps-v{list-style:none;counter-reset:st;margin:18px 0 0;padding:0;display:grid;gap:0;border-left:3px solid var(--yellow)}
+.steps-v li{counter-increment:st;padding:0 0 18px 22px;position:relative}
+.steps-v li::before{content:counter(st);position:absolute;left:-15px;top:0;width:27px;height:27px;border-radius:50%;background:var(--yellow);color:#141414;font-family:var(--f-display);font-weight:800;font-size:14px;display:grid;place-items:center}
+.steps-v li b{font-family:var(--f-display);font-size:18px;display:block}
+.steps-v li span{color:var(--muted)}
+.clients li{display:inline-flex;align-items:center;gap:8px}
+.clients li.logo::before{display:none}
+.clients li img{height:22px;width:auto;max-width:72px;border-radius:3px;flex:none}
+.clients li img.round{width:22px;border-radius:50%}
+.lv-band{background:var(--band);color:var(--on-band);border-top:4px solid var(--yellow)}
+.lv-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
+.lv-band .tag{color:var(--yellow)}
+.lv-band h2{color:var(--on-band)}
+.lv-band p.lead{margin-top:14px;opacity:.88;max-width:34em}
+.lv-band ul{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:10px}
+.lv-band li{display:grid;grid-template-columns:22px 1fr;gap:10px}
+.lv-band li::before{content:"";width:11px;height:11px;margin-top:8px;background:var(--yellow);clip-path:polygon(50% 0,100% 100%,0 100%)}
+.lv-band .cta{margin-top:26px}
+.lv-band .lv-fig{margin:0}
+@media (max-width:860px){.lv-grid{grid-template-columns:1fr;gap:28px}}
+</style>
+
+<style>
 .crumb{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#9C988C;padding-block:22px 0}
 .crumb a{color:#9C988C;text-decoration:none}.crumb a:hover{color:var(--yellow)}
 .page-hero{background:var(--band);color:var(--on-band)}
@@ -293,7 +322,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       <div><b>MECATRI</b><span>ENGENHARIA</span></div>
     </a>
     <nav class="links" aria-label="Seções">
-      <a href="#servicos">Serviços</a><a href="/responsabilidade-tecnica">Responsabilidade técnica</a><a href="#trabalhos">Trabalhos</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a>
+      <a href="#servicos">Serviços</a><a href="/linha-de-vida">Linha de vida</a><a href="/responsabilidade-tecnica">RT</a><a href="#trabalhos">Trabalhos</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a>
     </nav>
     <a class="btn btn-y" href="https://wa.me/5534920017269?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Mecatri%20Engenharia." target="_blank" rel="noopener">WhatsApp</a>
   </div>
@@ -303,9 +332,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   <div class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="tag">Engenharia mecânica · Uberaba / Triângulo Mineiro</p>
+        <p class="tag">Engenharia mecânica · Sede em Uberaba/MG · Todo o Brasil</p>
         <h1>Segurança, conformidade e eficiência para a <em>sua operação</em>.</h1>
-        <p class="lead">Laudos técnicos, adequação às normas regulamentadoras, responsabilidade técnica e projetos mecânicos para indústrias, oficinas, frotas e empresas da região.</p>
+        <p class="lead">Laudos técnicos, adequação às normas regulamentadoras, responsabilidade técnica e projetos mecânicos para indústrias, oficinas, frotas e empresas de todo o Brasil.</p>
         <div class="cta">
           <a class="btn btn-y" href="https://wa.me/5534920017269?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">Pedir orçamento</a>
           <a class="btn btn-o" href="#servicos">Ver serviços</a>
@@ -322,7 +351,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
           <dt>Normas</dt><dd>NR-11 · NR-12 · NR-13 · NR-35</dd>
           <dt>Documento</dt><dd>Emitido com ART no CREA-MG</dd>
           <dt>Sede</dt><dd>Uberaba/MG</dd>
-          <dt>Atendimento</dt><dd>Triângulo Mineiro e região</dd>
+          <dt>Atendimento</dt><dd>Todo o Brasil</dd>
         </dl>
       </div>
     </div>
@@ -340,14 +369,53 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
         <p>Cada serviço termina num documento técnico assinado e com ART, pronto para fiscalização, auditoria ou seguradora.</p>
       </div>
       <div class="svc">
-        <article><span class="code">NR-12</span><h3><a href="/laudo-nr-12">Laudos de máquinas e equipamentos</a></h3><p>Apreciação de riscos, inventário de máquinas, plano de adequação e laudo de conformidade.</p><a class="more-link" href="/laudo-nr-12">Saiba mais →</a></article>
+        <article><span class="code">NR-12</span><h3><a href="/laudo-nr-12">Adequação NR-12: do projeto à execução</a></h3><p>Apreciação de riscos, laudo, projeto das proteções e execução da adequação das máquinas, até o laudo de conformidade.</p><a class="more-link" href="/laudo-nr-12">Saiba mais →</a></article>
         <article><span class="code">NR-13</span><h3><a href="/laudo-nr-13">Vasos de pressão e compressores</a></h3><p>Inspeção, reconstituição de prontuário, categorização e documentação de vasos e reservatórios.</p><a class="more-link" href="/laudo-nr-13">Saiba mais →</a></article>
         <article><span class="code">RT</span><h3><a href="/responsabilidade-tecnica">Responsabilidade técnica</a></h3><p>Engenheiro responsável pela sua empresa junto ao CREA, com visitas e acompanhamento contínuo.</p><a class="more-link" href="/responsabilidade-tecnica">Saiba mais →</a></article>
         <article><span class="code">VEÍCULOS</span><h3><a href="/laudo-caminhoes-fumaca-preta">Laudos de caminhões e fumaça preta</a></h3><p>Laudos para caminhões, implementos e equipamentos veiculares, e laudo de fumaça preta para frotas.</p><a class="more-link" href="/laudo-caminhoes-fumaca-preta">Saiba mais →</a></article>
-        <article><span class="code">PROJETOS</span><h3><a href="/projetos-mecanicos">Projetos mecânicos</a></h3><p>Adequação à NR-12, estruturas metálicas, plataformas e escadas, dispositivos de máquinas e linhas de vida NR-35.</p><a class="more-link" href="/projetos-mecanicos">Saiba mais →</a></article>
+        <article><span class="code">PROJETOS</span><h3><a href="/projetos-mecanicos">Projetos mecânicos</a></h3><p>Estruturas metálicas, plataformas e escadas, pontes rolantes, dispositivos de máquinas e reconstituição de projetos.</p><a class="more-link" href="/projetos-mecanicos">Saiba mais →</a></article>
         <article><span class="code">CONSULTORIA</span><h3>Consultoria em segurança do trabalho</h3><p>Consultoria de engenharia, adequação às normas regulamentadoras e acompanhamento de obras e manutenção.</p></article>
       </div>
       <p class="note">Também fazemos venda e aluguel de máquinas. Fale com a gente para saber o que está disponível.</p>
+    </div>
+  </section>
+
+  <section id="linha-de-vida" class="lv-band">
+    <div class="wrap lv-grid">
+      <div>
+        <p class="tag">Destaque · NR-35</p>
+        <h2 style="margin-top:10px">Linha de vida com projeto, cálculo e ART</h2>
+        <p class="lead">Linhas de vida horizontais em cabo de aço e pontos de ancoragem para trabalho em altura, calculadas para o seu telhado, torre ou galpão.</p>
+        <ul>
+          <li><span>Memorial de cálculo: tração no cabo, flecha e zona livre de queda</span></li>
+          <li><span>Desenhos, lista de materiais e placa de identificação</span></li>
+          <li><span>Acompanhamento da montagem e inspeção periódica</span></li>
+        </ul>
+        <div class="cta">
+          <a class="btn btn-y" href="/linha-de-vida">Ver linha de vida</a>
+          <a class="btn btn-o" href="https://wa.me/5534920017269?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20de%20linha%20de%20vida." target="_blank" rel="noopener">Pedir orçamento</a>
+        </div>
+      </div>
+      <figure class="lv-fig"><svg viewBox="0 0 720 300" role="img" aria-labelledby="lvt">
+<title id="lvt">Esquema de linha de vida horizontal em cabo de aço</title>
+<rect x="0" y="0" width="720" height="300" fill="#141414"/>
+<rect x="40" y="268" width="640" height="8" fill="#2E2D29"/>
+<g fill="none" stroke="#55534C" stroke-width="2"><path d="M40 268V60M680 268V60"/></g>
+<rect x="70" y="70" width="14" height="70" fill="#9C988C"/><rect x="636" y="70" width="14" height="70" fill="#9C988C"/>
+<rect x="60" y="138" width="34" height="8" fill="#9C988C"/><rect x="626" y="138" width="34" height="8" fill="#9C988C"/>
+<path d="M84 80 Q360 108 636 80" fill="none" stroke="#F2B705" stroke-width="4"/>
+<rect x="96" y="74" width="34" height="12" rx="3" fill="#F6F5F1"/><text x="113" y="62" fill="#D9D6CC" font-family="IBM Plex Mono,monospace" font-size="11" text-anchor="middle">absorvedor</text>
+<rect x="590" y="74" width="34" height="12" rx="3" fill="#F6F5F1"/><text x="607" y="62" fill="#D9D6CC" font-family="IBM Plex Mono,monospace" font-size="11" text-anchor="middle">esticador</text>
+<circle cx="300" cy="98" r="6" fill="#F6F5F1"/><path d="M300 104 L318 150" stroke="#F6F5F1" stroke-width="2" stroke-dasharray="4 3"/>
+<circle cx="322" cy="160" r="9" fill="#F2B705"/><path d="M322 170v34M322 180l-14 12M322 180l14 12M322 204l-10 26M322 204l10 26" stroke="#F2B705" stroke-width="5" stroke-linecap="round"/>
+<path d="M470 94 V230" stroke="#D9D6CC" stroke-width="1.5" stroke-dasharray="5 4"/><path d="M464 102l6-8 6 8M464 222l6 8 6-8" fill="none" stroke="#D9D6CC" stroke-width="1.5"/>
+<text x="482" y="160" fill="#F6F5F1" font-family="IBM Plex Mono,monospace" font-size="12">zona livre</text><text x="482" y="176" fill="#F6F5F1" font-family="IBM Plex Mono,monospace" font-size="12">de queda</text>
+<path d="M84 250 H636" stroke="#9C988C" stroke-width="1.5"/><path d="M84 244v12M636 244v12" stroke="#9C988C" stroke-width="1.5"/>
+<text x="360" y="244" fill="#9C988C" font-family="IBM Plex Mono,monospace" font-size="12" text-anchor="middle">vão livre entre ancoragens</text>
+<text x="190" y="124" fill="#F2B705" font-family="IBM Plex Mono,monospace" font-size="12" text-anchor="middle">cabo de aço Ø 1/2"</text>
+<text x="77" y="164" fill="#9C988C" font-family="IBM Plex Mono,monospace" font-size="11" text-anchor="middle">pilarete</text>
+<text x="643" y="164" fill="#9C988C" font-family="IBM Plex Mono,monospace" font-size="11" text-anchor="middle">pilarete</text>
+</svg><figcaption>Projetos já entregues com vãos de 15 a 49 m e alturas de 6 a 10 m.</figcaption></figure>
     </div>
   </section>
 
@@ -391,7 +459,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
     <div class="wrap">
       <div class="sec-head">
         <div><p class="tag">Trabalhos realizados</p><h2 style="margin-top:10px">Experiência em campo</h2></div>
-        <p>Alguns serviços já entregues para indústrias, construtoras, oficinas e frotas da região.</p>
+        <p>Alguns serviços já entregues para indústrias, construtoras, clínicas, oficinas e frotas.</p>
       </div>
       <div class="port">
         <div><img src="/img/vaso-inox.webp" alt="Vaso de pressão misturador em aço inox" width="1200" height="900" loading="lazy"><div class="t"><span class="tag">NR-13</span><h3>Inspeção de vaso de pressão</h3><p>Inspeção de vaso misturador, placa de identificação e documentação conforme a norma.</p></div></div>
@@ -404,7 +472,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       <div class="clients">
         <p class="tag">Empresas atendidas</p>
         <ul>
-          <li>Syngenta</li><li>Prefeitura de Uberaba</li><li>Metallmec Engenharia</li><li>CR Manutenção</li><li>Galvão Soluções em Engenharia</li><li>Barsa Engenharia</li><li>Construtora Traço</li><li>Televale</li><li>C e TST</li><li>Castelo Real</li><li>Vitacharm</li><li>Sipcham</li><li>GPC</li>
+          <li class="logo"><img src="/img/cliente-curan.png" alt="" width="41" height="22">Curan Wellness Center</li><li class="logo"><img class="round" src="/img/cliente-alv.png" alt="" width="22" height="22">ALV Engenharia</li><li>Syngenta</li><li>Prefeitura de Uberaba</li><li>Metallmec Engenharia</li><li>CR Manutenção</li><li>Galvão Soluções em Engenharia</li><li>Barsa Engenharia</li><li>Construtora Traço</li><li>Televale</li><li>C e TST</li><li>Castelo Real</li><li>Vitacharm</li><li>Sipcham</li><li>GPC</li>
         </ul>
       </div>
     </div>
@@ -414,16 +482,16 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
     <div class="wrap about">
       <div>
         <p class="tag">Sobre</p>
-        <h2 style="margin-top:10px">Engenharia do Triângulo Mineiro</h2>
+        <h2 style="margin-top:10px">Do Triângulo Mineiro para todo o Brasil</h2>
         <div class="facts" style="margin-top:28px">
           <div><span>Sede</span><span>Uberaba/MG</span></div>
-          <div><span>Atendimento</span><span>Triângulo Mineiro e região</span></div>
+          <div><span>Atendimento</span><span>Todo o Brasil</span></div>
           <div><span>Documentação</span><span>Com ART no CREA-MG</span></div>
         </div>
       </div>
       <div class="txt">
-        <p>O nome Mecatri junta <strong>mecânica</strong> e <strong>Triângulo</strong>: uma empresa de engenharia daqui, que conhece a indústria, o agro e o transporte da região.</p>
-        <p>A Mecatri reúne anos de experiência em laudos, inspeções e projetos para indústrias, usinas, construtoras, oficinas e frotas da região.</p>
+        <p>O nome Mecatri junta <strong>mecânica</strong> e <strong>Triângulo</strong>: uma empresa de engenharia nascida em Uberaba, que conhece a indústria, o agro e o transporte, e hoje atende empresas em todo o Brasil.</p>
+        <p>A Mecatri reúne anos de experiência em laudos, inspeções e projetos para indústrias, usinas, construtoras, clínicas, oficinas e frotas.</p>
         <p>O objetivo é simples: deixar a sua operação segura, dentro das normas e funcionando bem, com um atendimento direto e sem enrolação.</p>
       </div>
     </div>
@@ -439,14 +507,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
           <div class="ch"><span class="tag">E-mail</span><span class="v">mecatriengenharia@gmail.com</span><button class="copy" type="button" data-copy="mecatriengenharia@gmail.com">copiar</button></div>
           <div class="ch"><span class="tag">Instagram</span><a href="https://www.instagram.com/mecatriengenharia/" target="_blank" rel="noopener">@mecatriengenharia</a><span></span></div>
           <div class="ch"><span class="tag">LinkedIn</span><a href="https://www.linkedin.com/company/mecatri-engenharia/" target="_blank" rel="noopener">Mecatri Engenharia</a><span></span></div>
-          <div class="ch"><span class="tag">Local</span><span class="v">Uberaba/MG · atendimento na região</span><span></span></div>
+          <div class="ch"><span class="tag">Local</span><span class="v">Sede em Uberaba/MG · atendimento em todo o Brasil</span><span></span></div>
         </div>
         <form id="f" novalidate>
           <label for="nome">Seu nome<input id="nome" name="nome" autocomplete="name" placeholder="Ex.: Carlos Souza"></label>
           <label for="empresa">Empresa<input id="empresa" name="empresa" autocomplete="organization" placeholder="Ex.: Metalúrgica Exemplo"></label>
           <label for="servico">Serviço
             <select id="servico" name="servico">
-              <option>Laudo NR-12 (máquinas)</option>
+              <option>Adequação NR-12 (máquinas)</option>
+              <option>Linha de vida (NR-35)</option>
               <option>NR-13 (vasos de pressão / compressores)</option>
               <option>Responsabilidade técnica (RT)</option>
               <option>Laudo de caminhão / fumaça preta</option>
